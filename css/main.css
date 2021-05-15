@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+}
+
+.main-container {
+  height: 100%;
+  padding: 20px 0 80px 0;
+}
+
+.main-content {
+  max-height: 100%;
+}
+
+.list-container {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.list {
+  margin: 0;
+}
+
+.footer-info {
+  position: fixed;
+  left: 23px;
+  bottom: 23px;
+  margin: 0;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+.collection-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(231, 230, 230);
+}
+
+.caption_card {
+  flex: 1;
+  border-right: 1px solid rgb(231, 230, 230);
+}
+
+.value_card {
+  flex: 3;
+}
+
+.block:last-child {
+    border-bottom: 0;
+}
