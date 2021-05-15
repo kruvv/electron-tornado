@@ -1,4 +1,4 @@
-# electron-tornado-app
+# electron-tornado
 This is a simple electron app paired with a python tornado server.
 
 The server generates 10 to 50 random ID's on /getData request. It also receives data from a third-party api in a request /api/posts. The received data is displayed in the application window.
