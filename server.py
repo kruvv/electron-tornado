@@ -17,7 +17,7 @@ if sys.version_info.major >= 3 and sys.version_info.minor >= 8 and os_name == "n
 
 # get port as argument
 PORT = sys.argv[1]
-uri = "https://jsonplaceholder.typicode.com/posts"
+data = []
 
 def write_out(str):
     sys.stdout.write(str)
@@ -25,12 +25,9 @@ def write_out(str):
 
 class getDataFromOtherAPI(RequestHandler):
     def get(self):
-        self.set_header("Content-Type", "application/json")
-        client = HTTPClient()
-        response = client.fetch(uri, method="GET")
-        self.write(response.body)
-        self.finish()
-
+        with open("dataPosts.json","r") as infile:
+             data = infile.read()
+        self.write(data)
 
 class GetDataHandler(RequestHandler):
     def set_default_headers(self):
